@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { find } from 'lodash';
-import { DateTimeV2, Entity, prebuiltTypes } from 'luis-entity-builder';
+import { DateTimeV2, Entity, prebuiltTypes } from 'luis-response-builder';
 import { ILuisResponse } from '../src/ILuisResponse';
 import { LuisResponseBuilder } from '../src/LuisResponseBuilder';
 

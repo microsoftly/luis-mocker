@@ -1,4 +1,4 @@
-import { Entity, Intent } from 'luis-entity-builder';
+import { Entity, Intent } from 'luis-response-builder';
 
 export interface ILuisResponse {
   query: string;

@@ -1,6 +1,6 @@
 import * as Promise from 'bluebird';
 import { expect } from 'chai';
-import { DateTimeV2 } from 'luis-entity-builder';
+import { DateTimeV2 } from 'luis-response-builder';
 import * as rp from 'request-promise';
 import { ILuisResponse } from './../src/ILuisResponse';
 import { LuisMocker } from './../src/LuisMocker';

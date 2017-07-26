@@ -15,17 +15,17 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "prepublishOnly": "npm run cleanBuild && mocha ./dist/test --recursive",
+    "prepublishOnly": "npm run cleanBuild && node_modules/mocha/bin/_mocha ./dist/test --recursive",
     "build": "node_modules/typescript/bin/tsc",
     "clean": "rm -rf ./dist",
     "cleanBuild": "npm run clean && npm run build",
-    "test": "mocha --compilers ts:ts-node/register ./test --recursive"
+    "test": "node_modules/mocha/bin/_mocha --compilers ts:ts-node/register ./test --recursive"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
-    "luis-entity-builder": "^0.0.2",
+    "luis-response-builder": "^0.0.11",
     "nock": "^9.0.14"
   },
   "devDependencies": {

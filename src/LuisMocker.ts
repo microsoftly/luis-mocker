@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { CustomEntity, Entity, Intent, PrebuiltEntity } from 'luis-entity-builder';
+import { CustomEntity, Entity, Intent, PrebuiltEntity } from 'luis-response-builder';
 import * as nock from 'nock';
 import * as rp from 'request-promise';
 import * as url from 'url';

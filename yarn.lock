@@ -11,8 +11,8 @@
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.1.tgz#37fea779617cfec3fd2b19a0247e8bbdd5133bf6"
 
 "@types/form-data@*":
-  version "0.0.33"
-  resolved "https://registry.yarnpkg.com/@types/form-data/-/form-data-0.0.33.tgz#c9ac85b2a5fd18435b8c85d9ecb50e6d6c893ff8"
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/form-data/-/form-data-2.2.0.tgz#a98aac91dc99857b6af24caef7ca6df302f31565"
   dependencies:
     "@types/node" "*"
 
@@ -31,8 +31,8 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@^8.0.14":
-  version "8.0.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.14.tgz#4a19dc6bb61d16c01cbadc7b30ac23518fff176b"
+  version "8.0.16"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.16.tgz#5aa51abd72621a0ce53fb86bccd76825ee1b4ca9"
 
 "@types/request-promise@^4.1.36":
   version "4.1.36"
@@ -56,10 +56,10 @@ ajv@^4.9.1:
     json-stable-stringify "^1.0.1"
 
 ansi-styles@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.1.0.tgz#09c202d5c917ec23188caa5c9cb9179cd9547750"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.0.tgz#c159b8d5be0f9e5a6f346dab94f16ce022161b88"
   dependencies:
-    color-convert "^1.0.0"
+    color-convert "^1.9.0"
 
 arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
@@ -163,7 +163,7 @@ co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
 
-color-convert@^1.0.0, color-convert@^1.9.0:
+color-convert@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.0.tgz#1accf97dd739b983bf994d56fec8f95853641b7a"
   dependencies:
@@ -445,9 +445,9 @@ lodash@^4.13.1, lodash@^4.17.4, lodash@~4.17.2:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-luis-entity-builder@^0.0.1, luis-entity-builder@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/luis-entity-builder/-/luis-entity-builder-0.0.2.tgz#5d9c83e760298ffd1d454c21feaca953a25192c0"
+luis-response-builder@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/luis-response-builder/-/luis-response-builder-0.0.11.tgz#060592b11ab925e5641df90cab92e2afe05f880e"
   dependencies:
     ansi-styles "^3.1.0"
     arrify "^1.0.1"
@@ -483,7 +483,6 @@ luis-entity-builder@^0.0.1, luis-entity-builder@^0.0.2:
     lodash.isarguments "^3.1.0"
     lodash.isarray "^3.0.4"
     lodash.keys "^3.1.2"
-    luis-entity-builder "^0.0.1"
     make-error "^1.3.0"
     minimatch "^3.0.4"
     minimist "^1.2.0"
@@ -509,15 +508,15 @@ make-error@^1.1.1, make-error@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.0.tgz#52ad3a339ccf10ce62b4040b708fe707244b8b96"
 
-mime-db@~1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1"
+mime-db@~1.29.0:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.29.0.tgz#48d26d235589651704ac5916ca06001914266878"
 
 mime-types@^2.1.12, mime-types@~2.1.7:
-  version "2.1.15"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.15.tgz#a4ebf5064094569237b8cf70046776d09fc92aed"
+  version "2.1.16"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.16.tgz#2b858a52e5ecd516db897ac2be87487830698e23"
   dependencies:
-    mime-db "~1.27.0"
+    mime-db "~1.29.0"
 
 minimatch@^3.0.2, minimatch@^3.0.4:
   version "3.0.4"
@@ -674,8 +673,8 @@ safe-buffer@^5.0.1:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
 semver@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"
 
 sntp@1.x.x:
   version "1.0.9"
@@ -730,8 +729,8 @@ supports-color@3.1.2, supports-color@^3.1.2:
     has-flag "^1.0.0"
 
 supports-color@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.2.0.tgz#ad986dc7eb2315d009b4d77c8169c2231a684037"
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.2.1.tgz#65a4bb2631e90e02420dba5554c375a4754bb836"
   dependencies:
     has-flag "^2.0.0"
 
@@ -742,8 +741,8 @@ tough-cookie@>=2.3.0, tough-cookie@~2.3.0:
     punycode "^1.4.1"
 
 ts-node@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.2.0.tgz#9814f0c0141784900cf12fef1197ad4b7f4d23d1"
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.3.0.tgz#c13c6a3024e30be1180dd53038fc209289d4bf69"
   dependencies:
     arrify "^1.0.0"
     chalk "^2.0.0"
@@ -753,7 +752,7 @@ ts-node@^3.2.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.0"
     tsconfig "^6.0.0"
-    v8flags "^2.0.11"
+    v8flags "^3.0.0"
     yn "^2.0.0"
 
 tsconfig@^6.0.0:
@@ -790,8 +789,8 @@ type-detect@^4.0.0, type-detect@^4.0.3:
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.3.tgz#0e3f2670b44099b0b46c284d136a7ef49c74c2ea"
 
 typescript@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.1.tgz#c3ccb16ddaa0b2314de031e7e6fee89e5ba346bc"
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.2.tgz#f8395f85d459276067c988aa41837a8f82870844"
 
 url@^0.11.0:
   version "0.11.0"
@@ -808,9 +807,15 @@ uuid@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
-v8flags@^2.0.11, v8flags@^2.1.1:
+v8flags@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-2.1.1.tgz#aab1a1fa30d45f88dd321148875ac02c0b55e5b4"
+  dependencies:
+    user-home "^1.1.1"
+
+v8flags@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-3.0.0.tgz#4be9604488e0c4123645def705b1848d16b8e01f"
   dependencies:
     user-home "^1.1.1"
 

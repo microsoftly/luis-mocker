@@ -1,5 +1,5 @@
 import { find } from 'lodash';
-import { CustomEntity, Entity, Intent, PrebuiltEntity } from 'luis-entity-builder';
+import { CustomEntity, Entity, Intent, PrebuiltEntity } from 'luis-response-builder';
 import { ILuisResponse } from './ILuisResponse';
 
 export class LuisResponseBuilder {
