@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "rootDir": "./",
+        "module": "commonjs",
+        "target": "es6",
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "noImplicitAny": false,
+        "outDir": "./dist",
+        "sourceMap": true,
+        "declaration": true,
+        "allowJs": false
+    },
+    "files": [
+        "./src/index.ts",
+        "./test/LuisMocker.spec.ts",
+        "./test/LuisResponseBuilder.spec.ts"
+    ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "luis-mocker",
+  "version": "0.0.1",
+  "description": "Http mocking for Luis.ai",
+  "keywords": [
+    "botbuilder",
+    "luis",
+    "luis.ai",
+    "mock",
+    "tdd",
+    "bdd",
+    "unit test",
+    "e2e",
+    "test"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run cleanBuild && mocha ./dist/test --recursive",
+    "build": "node_modules/typescript/bin/tsc",
+    "clean": "rm -rf ./dist",
+    "cleanBuild": "npm run clean && npm run build",
+    "test": "mocha --compilers ts:ts-node/register ./test --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "luis-entity-builder": "^0.0.2",
+    "nock": "^9.0.14"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/lodash": "^4.14.71",
+    "@types/mocha": "^2.2.41",
+    "@types/nock": "^8.2.1",
+    "@types/node": "^8.0.14",
+    "@types/request": "^2.0.0",
+    "@types/request-promise": "^4.1.36",
+    "bluebird": "^3.5.0",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "ts-node": "^3.2.0",
+    "typescript": "^2.4.1",
+    "url": "^0.11.0"
+  }
+}
