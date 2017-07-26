@@ -25,7 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
-    "luis-response-builder": "^0.0.11",
+    "luis-response-builder": "^0.0.15",
     "nock": "^9.0.14"
   },
   "devDependencies": {
