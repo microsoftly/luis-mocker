@@ -28,19 +28,28 @@ follows a method chaining pattern, e.g.
 ### ```build()```
 returns an full luis.ai response object
 # example use
-```javascript
-const 
-import { expect } from 'chai';
-import { DateTimeV2 } from 'luis-response-builder';
-import * as rp from 'request-promise';
-import { ILuisResponse } from './../src/ILuisResponse';
-import { LuisMocker } from './../src/LuisMocker';
-import { LuisResponseBuilder } from './../src/LuisResponseBuilder';
-const cancelTacoBellResponse = new LuisResponseBuilder(cancelTacoBellReservationUtterance)
-    .addCustomEntity({ startIndex: 0, endIndex: 4, type: RESTAURANT_NAME, entity: TACO_BELL, score: .98 })
-    .addPrebuiltEntity(july15AmbiguousDateEntity)
-    .addIntent(CANCEL_INTENT, .92)
-    .addIntent(LOGIN_INTENT, .3)
-    .addIntent(NONE_INTENT, .02)
-    .build();
+``` javascript
+const Promise = require("bluebird");
+const chai = require("chai");
+const luisResponseBuilder = require("luis-response-builder");
+const rp = require("request-promise");
+const LuisMocker = require("./../src/LuisMocker");
+const MockLuisResponseBuilder = require("./../src/MockLuisResponseBuilder");
+
+describe('LuisMocker', () => {
+    const july15AmbiguousDateEntity = luisResponseBuilder.DateTimeV2.createDateTimeV2_Date_EntityWithAmbiguousDate('July 15th', 0, 4, new Date('7/19'), new Date('2015'));
+    const cancelTacoBellResponse = new MockLuisResponseBuilder.MockLuisResponseBuilder('I want to cancel my reservation at Taco Bell on July 15th')
+        .addCustomEntity({ startIndex: 0, endIndex: 4, type: 'restaurantName', entity: 'taco bell', score: .98 })
+        .addPrebuiltEntity(july15AmbiguousDateEntity)
+        .addIntent('cancel', .92)
+        .addIntent('login', .3)
+        .addIntent('none', .02)
+        .build();
+
+    it('can mock requests to luis.ai', () => {
+        return rp.get(cancelTacoBellUri, { json: true })
+            .then((cancelTacoBellTestResponse) => {
+                chai.expect(cancelTacoBellTestResponse).to.deep.equal(cancelTacoBellResponse);
+            })
+});
 ```
