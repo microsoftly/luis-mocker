@@ -13,7 +13,7 @@
     "e2e",
     "test"
   ],
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "prepublishOnly": "npm run cleanBuild && node_modules/mocha/bin/_mocha ./dist/test --recursive",
     "build": "node_modules/typescript/bin/tsc",
