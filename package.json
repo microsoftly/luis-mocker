@@ -1,6 +1,6 @@
 {
   "name": "luis-mocker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Http mocking for Luis.ai",
   "keywords": [
     "botbuilder",
