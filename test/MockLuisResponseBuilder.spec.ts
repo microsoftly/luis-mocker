@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { find } from 'lodash';
 import { DateTimeV2, Entity, prebuiltTypes } from 'luis-response-builder';
 import { ILuisResponse } from '../src/ILuisResponse';
-import { LuisResponseBuilder } from '../src/LuisResponseBuilder';
+import { MockLuisResponseBuilder } from '../src/MockLuisResponseBuilder';
 
 const relativeDate = new Date('2015');
 const QUERY = 'I wanted to cancel my reservation at benu and taco bell on 9/22.';
@@ -14,7 +14,7 @@ describe('LuisResponseBuilder', () => {
     let luisResponse: ILuisResponse;
 
     before(() => {
-        const luisResponseBuilder = new LuisResponseBuilder(QUERY);
+        const luisResponseBuilder = new MockLuisResponseBuilder(QUERY);
         luisResponse =
             luisResponseBuilder.addCustomEntity({score: .9, type: 'restaurantName', entity: 'benu', startIndex: 4, endIndex: 10})
                 .addCustomEntity({score: .95, type: 'restaurantName', entity: 'taco bell', startIndex: 15, endIndex: 20})

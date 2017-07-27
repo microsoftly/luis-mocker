@@ -14,6 +14,6 @@
     "files": [
         "./src/index.ts",
         "./test/LuisMocker.spec.ts",
-        "./test/LuisResponseBuilder.spec.ts"
+        "./test/MockLuisResponseBuilder.spec.ts"
     ]
 }

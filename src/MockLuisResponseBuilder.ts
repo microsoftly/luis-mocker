@@ -2,7 +2,7 @@ import { find } from 'lodash';
 import { CustomEntity, Entity, Intent, PrebuiltEntity } from 'luis-response-builder';
 import { ILuisResponse } from './ILuisResponse';
 
-export class LuisResponseBuilder {
+export class MockLuisResponseBuilder {
     private query: string;
     private intents: Intent[];
     private entities: Entity[];
@@ -13,25 +13,25 @@ export class LuisResponseBuilder {
         this.entities = [] as Entity[];
     }
 
-    public setQuery(query: string): LuisResponseBuilder {
+    public setQuery(query: string): MockLuisResponseBuilder {
         this.query = query;
 
         return this;
     }
 
-    public addIntent(intent: string, score: number): LuisResponseBuilder {
+    public addIntent(intent: string, score: number): MockLuisResponseBuilder {
         this.addOrReplaceIntent({ intent, score });
 
         return this;
     }
 
-    public addPrebuiltEntity(entity: PrebuiltEntity): LuisResponseBuilder {
+    public addPrebuiltEntity(entity: PrebuiltEntity): MockLuisResponseBuilder {
         this.entities.push(entity);
 
         return this;
     }
 
-    public addCustomEntity(entity: CustomEntity): LuisResponseBuilder {
+    public addCustomEntity(entity: CustomEntity): MockLuisResponseBuilder {
         this.entities.push(entity);
 
         return this;
@@ -53,7 +53,7 @@ export class LuisResponseBuilder {
         this.intents.sort((a: Intent, b: Intent) => b.score - a.score);
     }
 
-    private addOrReplaceIntent(intent: Intent): LuisResponseBuilder {
+    private addOrReplaceIntent(intent: Intent): MockLuisResponseBuilder {
         const existingIntent = find(this.intents, ((i: Intent) => i.intent === intent.intent));
 
         if (existingIntent) {
