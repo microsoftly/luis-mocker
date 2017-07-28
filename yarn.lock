@@ -31,8 +31,8 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@^8.0.14":
-  version "8.0.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.16.tgz#5aa51abd72621a0ce53fb86bccd76825ee1b4ca9"
+  version "8.0.17"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.17.tgz#677bc8c118cfb76013febb62ede1f31d2c7222a1"
 
 "@types/request-promise@^4.1.36":
   version "4.1.36"
@@ -445,9 +445,9 @@ lodash@^4.13.1, lodash@^4.17.4, lodash@~4.17.2:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-luis-response-builder@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/luis-response-builder/-/luis-response-builder-0.1.2.tgz#be7a908c8b89863111f9b3244893c9ff9bdac6da"
+luis-response-builder@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/luis-response-builder/-/luis-response-builder-0.2.0.tgz#423c3e9f4a5283d57917507fa110b500e9e8886b"
   dependencies:
     ansi-styles "^3.1.0"
     arrify "^1.0.1"
@@ -474,6 +474,7 @@ luis-response-builder@^0.1.2:
     inflight "^1.0.6"
     inherits "^2.0.3"
     json3 "^3.3.2"
+    lodash "^4.17.4"
     lodash._baseassign "^3.2.0"
     lodash._basecopy "^3.0.1"
     lodash._basecreate "^3.0.3"

@@ -1,10 +1,8 @@
 import * as Promise from 'bluebird';
 import { expect } from 'chai';
-import { DateTimeV2 } from 'luis-response-builder';
+import { DateTimeV2, ILuisResponse, LuisResponseBuilder } from 'luis-response-builder';
 import * as rp from 'request-promise';
-import { ILuisResponse } from './../src/ILuisResponse';
 import { LuisMocker } from './../src/LuisMocker';
-import { MockLuisResponseBuilder } from './../src/MockLuisResponseBuilder';
 
 const LUIS_URL = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/appId?subscription-key=subKey&timezoneOffset=0&verbose=true&q=';
 const CANCEL_INTENT = 'cancel';
@@ -29,7 +27,7 @@ const loginIssuesUri = LuisMocker['getUtteranceUrl'](LUIS_URL, loginIssuesUttera
 const july15AmbiguousDateEntity =
     DateTimeV2.createDateTimeV2_Date_EntityWithAmbiguousDate('July 15th', 0, 4, new Date('7/19'), RELATIVE_YEAR);
 
-const cancelTacoBellResponse = new MockLuisResponseBuilder(cancelTacoBellReservationUtterance)
+const cancelTacoBellResponse = new LuisResponseBuilder(cancelTacoBellReservationUtterance)
     .addCustomEntity({ startIndex: 0, endIndex: 4, type: RESTAURANT_NAME, entity: TACO_BELL, score: .98 })
     .addPrebuiltEntity(july15AmbiguousDateEntity)
     .addIntent(CANCEL_INTENT, .92)
@@ -37,14 +35,14 @@ const cancelTacoBellResponse = new MockLuisResponseBuilder(cancelTacoBellReserva
     .addIntent(NONE_INTENT, .02)
     .build();
 
-const cancelBenuResponse = new MockLuisResponseBuilder(cancelBenuReservationUtternace)
+const cancelBenuResponse = new LuisResponseBuilder(cancelBenuReservationUtternace)
     .addCustomEntity({ startIndex: 0, endIndex: 4, type: RESTAURANT_NAME, entity: BENU, score: .90 })
     .addIntent(CANCEL_INTENT, .98)
     .addIntent(LOGIN_INTENT, .28)
     .addIntent(NONE_INTENT, .01)
     .build();
 
-const loginIssuesResponse = new MockLuisResponseBuilder(loginIssuesUtterance)
+const loginIssuesResponse = new LuisResponseBuilder(loginIssuesUtterance)
     .addIntent(LOGIN_INTENT, .78)
     .addIntent(CANCEL_INTENT, .2)
     .addIntent(NONE_INTENT, .01)

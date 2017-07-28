@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.4",
-    "luis-response-builder": "^0.1.2",
+    "luis-response-builder": "^0.2.0",
     "nock": "^9.0.14"
   },
   "repository": {

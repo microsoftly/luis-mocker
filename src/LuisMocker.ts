@@ -1,9 +1,8 @@
 import { expect } from 'chai';
-import { CustomEntity, Entity, Intent, PrebuiltEntity } from 'luis-response-builder';
+import { CustomEntity, Entity, ILuisResponse, Intent, PrebuiltEntity } from 'luis-response-builder';
 import * as nock from 'nock';
 import * as rp from 'request-promise';
 import * as url from 'url';
-import { ILuisResponse } from './ILuisResponse';
 
 export class LuisMocker {
     private baseUrl: string;

@@ -13,7 +13,6 @@
     },
     "files": [
         "./src/index.ts",
-        "./test/LuisMocker.spec.ts",
-        "./test/MockLuisResponseBuilder.spec.ts"
+        "./test/LuisMocker.spec.ts"
     ]
 }
