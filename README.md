@@ -1,4 +1,5 @@
 # Luis Mocker [![CircleCI](https://circleci.com/gh/microsoftly/luis-mocker.svg?style=shield)](https://circleci.com/gh/microsoftly/luis-mocker)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmicrosoftly%2Fluis-mocker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmicrosoftly%2Fluis-mocker?ref=badge_shield)
 Easy http mocking of luis.ai. Perfect for testing services that rely on Luis.ai by making them deterministic and avoiding pay per call requests.
 
 This is a work in progress. PRs are welcome! 
@@ -35,3 +36,6 @@ describe('LuisMocker', () => {
             })
 });
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmicrosoftly%2Fluis-mocker.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmicrosoftly%2Fluis-mocker?ref=badge_large)
